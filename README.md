@@ -1,4 +1,4 @@
-# Mobile GS Alertas - Aplicativo de Monitoramento
+# AlertaIncendioApp🔥
 
 Este é um aplicativo móvel desenvolvido em React Native para o sistema de monitoramento de sensores e alertas de incêndio. Ele permite gerenciar:
 
@@ -12,9 +12,10 @@ Este é um aplicativo móvel desenvolvido em React Native para o sistema de moni
 
 - React Native
 - Expo
-- Axios para requisições HTTP
-- @react-native-picker/picker para seletores
-- @expo/vector-icons para ícones
+- Axios
+- Integração com API REST
+- React Navigation
+- Picker
 
 ## Pré-requisitos
 
@@ -33,10 +34,9 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 
 Siga os passos abaixo para configurar e rodar o projeto em sua máquina:
 
-1.  **Clone o repositório** (se ainda não o fez, substitua `[URL_DO_SEU_REPOSITORIO]` pelo URL real):
+1.  **Clone o repositório**:
     ```bash
-    git clone [URL_DO_SEU_REPOSITORIO]
-    cd [NOME_DA_PASTA_DO_REPOSITORIO]
+    git clone github.com/ntncaue/mobile-gs-alertas.git
     ```
 
 2.  **Navegue até a pasta do aplicativo:**
@@ -56,7 +56,7 @@ Siga os passos abaixo para configurar e rodar o projeto em sua máquina:
 Dentro da pasta `mobile-gs-alertas-app`, execute o seguinte comando para iniciar o servidor de desenvolvimento do Expo:
 
 ```bash
-npm start
+npm start ou npx expo start
 # ou
 yarn start
 ```
@@ -69,3 +69,4 @@ Após iniciar o servidor, você terá algumas opções:
 -   Escaneie o código QR com o aplicativo Expo Go (disponível na App Store ou Google Play) para abrir em seu dispositivo físico.
 
 Certifique-se de que sua API de backend esteja rodando e acessível pelo aplicativo para que todas as funcionalidades funcionem corretamente. 
+Para que a API conecte sem problemas, edite a baseURL em api.js com o ip da sua máquina.
