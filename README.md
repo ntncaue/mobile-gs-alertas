@@ -70,3 +70,10 @@ Após iniciar o servidor, você terá algumas opções:
 
 Certifique-se de que sua API de backend esteja rodando e acessível pelo aplicativo para que todas as funcionalidades funcionem corretamente. 
 Para que a API conecte sem problemas, edite a baseURL em api.js com o ip da sua máquina.
+
+## Importante
+- Antonio Caue, rm558891
+- Felipe Orikasa, rm557435
+- Marcelo Bonfim, rm558254
+
+- Link do video: https://youtu.be/1tK7--2skLs
