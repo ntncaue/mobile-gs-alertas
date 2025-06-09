@@ -24,7 +24,6 @@ export default function SensoresScreen() {
       const response = await getSensores();
       console.log('SensoresScreen - Resposta bruta:', response);
       
-      // Simplifica os dados para evitar referências circulares
       const sensoresSimplificados = response.data.$values || response.data;
       
       console.log('SensoresScreen - Sensores processados:', sensoresSimplificados);

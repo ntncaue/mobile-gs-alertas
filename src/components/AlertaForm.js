@@ -61,11 +61,11 @@ export default function AlertaForm({ onSubmit, initialData, loading, onCancel })
 
     const alertaData = {
       idAlerta: initialData ? initialData.idAlerta : 0,
-      dataAlerta: new Date().toISOString(), // Data/hora atual automática
+      dataAlerta: new Date().toISOString(), 
       nivelPerigo,
       observacao,
       leituraSensorId: parseInt(leituraSensorId, 10),
-      equipeRespostaId: parseInt(equipeRespostaId, 10), // Adicionado novamente
+      equipeRespostaId: parseInt(equipeRespostaId, 10), 
     };
 
     console.log('AlertaForm - Dados sendo enviados:', JSON.stringify(alertaData, null, 2));

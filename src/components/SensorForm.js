@@ -27,14 +27,11 @@ export default function SensorForm({ onSubmit, initialData, loading, onCancel })
     const fetchAreas = async () => {
       try {
         const response = await getAreas();
-        // Assegura que response.data é um array, tratando a propriedade $values se presente
         const fetchedAreas = response.data.$values || response.data;
         setAreas(fetchedAreas);
-        // Se estiver editando e houver um initialData.areaMonitoradaId, selecione-o
         if (initialData && initialData.areaMonitoradaId != null) {
           setAreaMonitoradaId(String(initialData.areaMonitoradaId));
         } else if (fetchedAreas.length > 0) {
-          // Se não houver areaMonitoradaId inicial, defina a primeira área como padrão
           setAreaMonitoradaId(String(fetchedAreas[0].idArea));
         }
       } catch (error) {

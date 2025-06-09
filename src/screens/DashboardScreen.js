@@ -32,11 +32,11 @@ export default function DashboardScreen() {
         getLeituras(),
       ]);
 
-      const processedSensores = sensoresRes.data.$values || sensoresRes.data; // Handle potential $values
-      const processedAreas = areasRes.data.$values || areasRes.data; // Handle potential $values
-      const processedAlertas = alertasRes.data.$values || alertasRes.data; // Handle potential $values
-      const processedEquipes = equipesRes.data.$values || equipesRes.data; // Handle potential $values
-      const processedLeituras = leiturasRes.data.$values || leiturasRes.data; // Handle potential $values
+      const processedSensores = sensoresRes.data.$values || sensoresRes.data; 
+      const processedAreas = areasRes.data.$values || areasRes.data; 
+      const processedAlertas = alertasRes.data.$values || alertasRes.data; 
+      const processedEquipes = equipesRes.data.$values || equipesRes.data; 
+      const processedLeituras = leiturasRes.data.$values || leiturasRes.data; 
 
       setSummary({
         alertas: processedAlertas.length,
@@ -133,7 +133,6 @@ const styles = StyleSheet.create({
     color: colors.onBackground,
   },
   summaryGrid: {
-    // Removendo flexbox daqui, agora é apenas um container para o card superior e a grade inferior
   },
   topCardContainer: {
     width: '100%',

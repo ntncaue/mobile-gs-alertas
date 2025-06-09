@@ -26,7 +26,7 @@ export const colors = {
   inverseSurface: '#2F3033', // Superfície inversa para temas escuros
   inverseOnSurface: '#F1F0F4', // Texto sobre superfície inversa
   inversePrimary: '#7BCFFF', // Primário inverso
-  // Cores antigas que podem ser mantidas ou removidas após a refatoração
+  //
   lightGray: '#CCCCCC',
   darkGray: '#888888',
   white: '#FFFFFF',

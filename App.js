@@ -11,12 +11,10 @@ import EquipesScreen from './src/screens/EquipesScreen';
 import LeiturasScreen from './src/screens/LeiturasScreen';
 import DashboardScreen from './src/screens/DashboardScreen';
 import SobreNosScreen from './src/screens/SobreNosScreen';
-import { colors } from './src/constants/colors'; // Importar as cores
+import { colors } from './src/constants/colors'; 
 
 const Tab = createBottomTabNavigator();
 
-// App principal do projeto GS Alertas - ponto de entrada do app
-// Navegação principal configurada aqui
 export default function App() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
@@ -36,27 +34,27 @@ export default function App() {
               } else if (route.name === 'Equipes') {
                 iconName = focused ? 'people' : 'people-outline';
               } else if (route.name === 'Leituras') {
-                iconName = focused ? 'analytics' : 'analytics-outline'; // Ou 'stats-chart' / 'stats-chart-outline'
+                iconName = focused ? 'analytics' : 'analytics-outline'; 
               } else if (route.name === 'Sobre') {
                 iconName = focused ? 'information-circle' : 'information-circle-outline';
               }
               return <Ionicons name={iconName} size={size} color={color} />;
             },
-            tabBarActiveTintColor: colors.primary, // Cor para o ícone e texto ativos
-            tabBarInactiveTintColor: colors.onSurfaceVariant, // Cor para o ícone e texto inativos
+            tabBarActiveTintColor: colors.primary, 
+            tabBarInactiveTintColor: colors.onSurfaceVariant, 
             tabBarStyle: {
-              backgroundColor: colors.surface, // Cor de fundo da barra de navegação
-              borderTopWidth: 0, // Remover borda superior padrão
-              elevation: 0, // Remover sombra no Android
-              shadowOpacity: 0, // Remover sombra no iOS
-              height: 60, // Ajustar altura conforme necessário
+              backgroundColor: colors.surface, 
+              borderTopWidth: 0, 
+              elevation: 0, 
+              shadowOpacity: 0, 
+              height: 60, 
             },
             tabBarLabelStyle: {
               fontSize: 12,
-              paddingBottom: 5, // Ajustar espaçamento do texto
+              paddingBottom: 5, 
             },
             tabBarIconStyle: {
-              marginTop: 5, // Ajustar espaçamento do ícone
+              marginTop: 5, 
             },
           })}
         >
@@ -73,6 +71,3 @@ export default function App() {
   );
 }
 
-// TODO: Implementar CRUD completo para cada tela abaixo
-
-// Navegação e telas principais configuradas. Próximo passo: implementar CRUD e integração com API.

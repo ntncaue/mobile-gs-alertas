@@ -23,11 +23,9 @@ export default function LeituraForm({ onSubmit, initialData, loading, onCancel }
         const response = await getSensores();
         const fetchedSensores = response.data.$values || response.data;
         setSensores(fetchedSensores);
-        // Se estiver editando e houver um initialData.sensorId, selecione-o
         if (initialData && initialData.sensorId != null) {
           setSensorId(String(initialData.sensorId));
         } else if (fetchedSensores.length > 0) {
-          // Se não houver sensorId inicial, defina o primeiro sensor como padrão
           setSensorId(String(fetchedSensores[0].idSensor));
         }
       } catch (error) {
@@ -47,7 +45,6 @@ export default function LeituraForm({ onSubmit, initialData, loading, onCancel }
     const leituraData = {
       idLeitura: initialData ? initialData.idLeitura : 0,
       valorMedicao: parseFloat(valorMedicao),
-      timestampLeitura: new Date().toISOString(), // Data/hora atual automática
       sensorId: parseInt(sensorId, 10),
     };
 
